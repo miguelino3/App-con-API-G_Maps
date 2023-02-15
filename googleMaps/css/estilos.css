@@ -1,0 +1,41 @@
+#map {
+    height: 93vh;
+
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+#rutaSelected {
+    height: fit-content;
+}
+.contNR {
+    height: inherit;
+    width: auto;
+}
+.menuOpc {
+    display: flex;
+    flex-flow: row wrap;
+    border: 2px solid black;
+
+    background-color: lightblue;
+    padding: 5px;
+}
+.menuOpc button, .menuOpc select, input {
+    padding: 2px;
+    margin-left: 5px;
+    font-size: 18px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.loading {
+    display: none; /*Esta será la propiedad que cambie jQuery para hacer aparecer 'cargando...'*/
+    width: 25px;
+    height: 25px;
+}
+.green-txt {
+    color: rgb(54, 176, 54);
+}
+.red-txt {
+    color: red;
+}

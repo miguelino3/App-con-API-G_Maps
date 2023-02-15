@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <title>Maps JavaScript API</title>
+    <script src="js/jquery-3.6.3.js"></script>
+    <link rel="stylesheet" href="css/estilos.css"/>
+</head>
+<body>
+    <nav>
+        <div class="menuOpc">
+            <button type="button" id="clearBTN">Borrar todos</button>
+            <button type="button" id="mostrarMARKS">Ocultar/Mostrar todos</button>
+            <input type="text" id="nombRuta" placeholder="Nombre de ruta"/>
+            <button class="green-txt" type="button" id="guardarRuta" title="Guarda una *nueva* ruta con el nombre introducido">Guardar ruta</button>
+            <select id="savedRutas">
+                <option value="N/A">Elije una ruta</option>
+            </select>
+            <button class="red-txt" type="button" id="borrarRuta">Borrar ruta</button>
+            <img class="loading" src="img/loading.gif" alt="Cargando..."/>
+            <div class="contNR">
+                <p id="rutaSelected"></p>
+            </div>
+        </div>
+    </nav>
+<div id ="map"></div>
+<!--CON &libraries=LIBRERIA y &callback=FUNCION ; TRAS LA CLAVE DE API [key=CLAVE_API] RECOGEMOS LA LIBRERIA PARA LAS
+    DISTANCIAS, u otras, Y LLAMAMOS A LA FUNCION QUE QUERAMOS, como initMap que muestra el mapa, RESPECTIVAMENTE-->
+<script
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVY7ecjisONwD60ie5YnHTkVQ0xyWZf0o&libraries=geometry&callback=initMap" async defer></script>
+<!--No es necesario usar initMap() en <script>, ya que el src de este script YA LLAMA a initMap(), mediante la parte de la URL '&callback'-->
+<script src="js/scriptMaps.js"></script>
+</body>
+</html>
